@@ -1,6 +1,6 @@
 /* 
 
-Code mercilessly stolen from github.com/martinrue
+Gender code mercilessly stolen from github.com/martinrue
 
 I make no apologies
 
