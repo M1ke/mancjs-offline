@@ -5,5 +5,4 @@ CACHE MANIFEST
 /assets/lib/jquery.js
 /assets/node-gender.js
 
-NETWORK:
 genders.json
