@@ -70,15 +70,12 @@ theme :
 
       <hr>
       <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-          with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a>
-          and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
+        <p>Made by <a href="{{ site.author.url }}">{{ site.author.name }}</a> with help from <a href="http://jekyllbootstrap.com" target="_blank" title="The Definitive Jekyll Blogging Framework">Jekyll Bootstrap</a> and <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a>
         </p>
       </footer>
 
     </div>
     <script src="http://code.jquery.com/jquery.js"></script>
-    <script type="text/javascript" src="{{ ASSET_PATH }}/bootstrap/js/bootstrap-alert.js"></script>
     <script type="text/javascript" src="/assets/node-gender.js"></script>
   </body>
 </html>

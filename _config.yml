@@ -12,8 +12,9 @@ pygments: true
 title : MancJS
 tagline: Offline is the new online
 author :
-  name : Mike Lehan
+  name : M1ke
   email : mike@m1ke.me
+  url: http://m1ke.me
   github : m1ke
   twitter : m1ke
 
