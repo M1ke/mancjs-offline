@@ -49,6 +49,7 @@ var genderGuesser={
 			}
 		}
 		$('div.alert strong').text(gender).parent().fadeIn();
+		this.save(nameInput,gender);
 	},
 	getGenders: function(name) {
 		var self=this;
@@ -57,6 +58,16 @@ var genderGuesser={
 			self.gotGenders=true;
 			self.findName(name,response);
 		});
+	},
+	storageID:function() {
+		return 1*localStorage.get('storageID');
+	}
+	save: function(name,gender) {
+		var storageID=this.storageID();
+		storageID++;
+		localStorage.set('storageID',storageID);
+		localStorage.set('name-'+storageID,name);
+		localStorage.set('gender-'+storageID,gender);
 	},
 };
 
