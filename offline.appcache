@@ -1,3 +1,9 @@
 CACHE MANIFEST
 /assets/themes/twitter/bootstrap/css/bootstrap.2.2.2.min.css
 /assets/themes/twitter/css/style.css?body=1
+
+/assets/lib/jquery.js
+/assets/node-gender.js
+
+NETWORK:
+genders.json
