@@ -8,6 +8,15 @@ M1ke
 
 */
 
+var updateReady;
+window.applicationCache.addEventListener('updateready',function(){
+	updateReady=true;
+	jQuery && updateInform();
+});
+function updateInform() {
+	$('<div class="alert hide"><p>An update to this app has been downloaded. Please <a href="'+window.location.href+'">click here to update to the new version</a></p>.</div>').prependTo('div.content').slideDown();
+};
+
 var genderGuesser={
 	genders:{},
 	gotGenders:false,
@@ -57,4 +66,7 @@ $(function(){
 		var name=$('#inputName').val();
 		genderGuesser.find(name);
 	});
+	if (updateReady) {
+		updateInform();
+	}
 });
