@@ -60,14 +60,23 @@ var genderGuesser={
 		});
 	},
 	storageID:function() {
-		return 1*localStorage.get('storageID');
-	}
+		return 1*localStorage.getItem('storageID');
+	},
 	save: function(name,gender) {
 		var storageID=this.storageID();
 		storageID++;
-		localStorage.set('storageID',storageID);
-		localStorage.set('name-'+storageID,name);
-		localStorage.set('gender-'+storageID,gender);
+		localStorage.setItem('storageID',storageID);
+		localStorage.setItem('name-'+storageID,name);
+		localStorage.setItem('gender-'+storageID,gender);
+	},
+	load:function() {
+		var storageID=this.storageID(),name='',gender='';
+		var $table=$('table.saved');
+		for (var n=storageID;n>0;n--) {
+			name=localStorage.getItem('name-'+n);
+			gender=localStorage.getItem('gender-'+n);
+			$table.append('<tr><td>'+name+'</td><td>'+gender+'</td></tr>');
+		}
 	},
 };
 
@@ -80,4 +89,5 @@ $(function(){
 	if (updateReady) {
 		updateInform();
 	}
+	genderGuesser.load();
 });
