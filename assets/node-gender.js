@@ -32,14 +32,13 @@ var genderGuesser={
 		}
 	},
 	findName: function(nameInput,genders) {
-		var gender;
-		nameInput=nameInput.toUpperCase();
-		if (genders[nameInput]) {
-			gender=genders[nameInput];
+		var gender,nameInputUC=nameInput.toUpperCase();
+		if (genders[nameInputUC]) {
+			gender=genders[nameInputUC];
 		}
 		else {
 			for (var name in genders) {
-				if (name.match(nameInput)) {
+				if (name.match(nameInputUC)) {
 					gender=genders[name];
 					break;
 				}
