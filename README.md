@@ -3,6 +3,13 @@
 
 The tutorial will take place at the [MancJS](http://mancjs.com/) meetup in August, on the 7th at 7pm in [TechHub Manchester](manchester.techhub.com).
 
+## What you will need
+
+* [Jekyll](https://github.com/mojombo/jekyll)
+* A modern web browser, ideally Google Chrome because of it's excellent inspector
+
+## The steps
+
 Before the session starts I will push the following staged branches to help walk through the process:
 
 * __stage-0__ the basic application
@@ -14,10 +21,10 @@ Before the session starts I will push the following staged branches to help walk
 * __stage-6__ letting the user know that there's a change
 * __stage-7__ localStorage to save the state of our application
 
-## Made with Jekyll-Bootstrap
+### Made with Jekyll-Bootstrap
 
 For all usage and documentation please see: <http://jekyllbootstrap.com>. Version 0.3.0.
 
-## License
+### License
 
 [MIT](http://opensource.org/licenses/MIT)
