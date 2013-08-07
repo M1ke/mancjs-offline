@@ -48,6 +48,7 @@ var genderGuesser={
 			}
 		}
 		$('div.alert strong').text(gender).parent().fadeIn();
+		this.showInTable(nameInput,gender);
 		this.save(nameInput,gender);
 	},
 	getGenders: function(name) {
@@ -70,12 +71,19 @@ var genderGuesser={
 	},
 	load:function() {
 		var storageID=this.storageID(),name='',gender='';
-		var $table=$('table.saved');
+		var $table=this.getTable();
 		for (var n=storageID;n>0;n--) {
 			name=localStorage.getItem('name-'+n);
 			gender=localStorage.getItem('gender-'+n);
-			$table.append('<tr><td>'+name+'</td><td>'+gender+'</td></tr>');
+			this.showInTable(name,gender,$table);
 		}
+	},
+	getTable: function() {
+		return $('table.saved');
+	},
+	showInTable: function(name,gender,$table) {
+		$table=$table || this.getTable();
+		$table.append('<tr><td>'+name+'</td><td>'+gender+'</td></tr>');
 	},
 };
 
